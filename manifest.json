@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Unprocrastinator",
+  "version": "1.0",
+  "description": "Delete webpages for fun and profit",
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "*"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  }
+}
