@@ -4,21 +4,10 @@
   "version": "1.0",
   "description": "Delete webpages for fun and profit",
   "action": {
-    "default_popup": "popup/popup.html"
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/icon16.png"
   },
-  "content_scripts": [
-    {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "*"
-      ]
-    }
-  ],
-  "permissions": [
-    "storage"
-  ],
   "background": {
-    "service_worker": "service-worker.js",
-    "type": "module"
+    "service_worker": "background.js"
   }
 }
